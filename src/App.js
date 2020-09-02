@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
+  const [count, setCount] = useState(0);
   return (
     <div className="app">
       <div className="result">
-        Результат: <span>0</span>
+        Результат: <span>{count}</span>
       </div>
 
       <div className="buttons">
-        <button>+</button>
-        <button>-</button>
+        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={() => setCount(count - 1)}>-</button>
       </div>
     </div>
   );
