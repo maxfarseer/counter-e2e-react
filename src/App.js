@@ -6,12 +6,19 @@ const App = () => {
   return (
     <div className="app">
       <div className="result">
-        Результат: <span>{count}</span>
+        Результат: <span data-cy="result">{count}</span>
       </div>
 
       <div className="buttons">
-        <button onClick={() => setCount(count + 1)}>+</button>
-        <button onClick={() => setCount(count - 1)}>-</button>
+        <button data-cy="plus" onClick={() => setCount(count + 1)}>
+          +
+        </button>
+        <button data-cy="minus" onClick={() => setCount(count - 1)}>
+          -
+        </button>
+        <button data-cy="reset" onClick={() => setCount(0)}>
+          Сбросить
+        </button>
       </div>
     </div>
   );
