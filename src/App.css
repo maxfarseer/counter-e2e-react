@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.result {
+  margin: 10px;
+}
+.buttons button {
+  margin: 3px;
+}
