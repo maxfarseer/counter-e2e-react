@@ -16,25 +16,25 @@ context("Counter main", () => {
 
   // результат должен быть равен 0
   it("Should render result equal to 0", () => {
-    cy.get('[data-cy="result"]').contains(0);
+    cy.get('[data-cy="result"]').should("have.text", 0);
   });
 
   // после клика на "плюс", результат должен быть равен единице
   it("After click on plus, result should be equal 1", () => {
     cy.get('[data-cy="plus"]').click();
-    cy.get('[data-cy="result"]').contains(1);
+    cy.get('[data-cy="result"]').should("have.text", 1);
   });
 
   // после еще одного клика на "плюс", результат должен быть равен двум
   it("After second click on plus, result should be equal 2", () => {
     cy.get('[data-cy="plus"]').click();
-    cy.get('[data-cy="result"]').contains(2);
+    cy.get('[data-cy="result"]').should("have.text", 2);
   });
 
   // после клика на "минус", результат должен быть равен единице
   it("After click on minus, result should be equal 1", () => {
     cy.get('[data-cy="minus"]').click();
-    cy.get('[data-cy="result"]').contains(1);
+    cy.get('[data-cy="result"]').should("have.text", 1);
   });
 
   // эмулируем клик по кнопке "Сбросить"
@@ -44,6 +44,6 @@ context("Counter main", () => {
 
   // проверяем, что результат равен 0
   it("After click on 'Reset' button, result should be equal 0", () => {
-    cy.get('[data-cy="result"]').contains(0);
+    cy.get('[data-cy="result"]').should("have.text", 0);
   });
 });
